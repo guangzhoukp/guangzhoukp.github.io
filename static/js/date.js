@@ -1,5 +1,5 @@
 
-//Å©ÀúÏÔÊ¾ 
+//å†œåŽ†æ˜¾ç¤º 
 <!-- 
 function CalConv() 
  { 
@@ -46,7 +46,7 @@ function CalConv()
  new tagLunarCal( 43, 0, 0, 26, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 ), 
  new tagLunarCal( 32, 0, 1, 31, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0 ), 
  new tagLunarCal( 22, 3, 2, 36, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0 ) ]; 
- /* Ãñ¹úÄêÔÂÈÕ Codes by / */ 
+ /* æ°‘å›½å¹´æœˆæ—¥ Codes by / */ 
  SolarCal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]; 
 SolarDays = [ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366, 397 ]; 
      
@@ -100,16 +100,16 @@ SolarDays = [ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396, 0
  this.length=initArray.arguments.length 
  for(var i=0;i<this.length;i++) 
  this[i+1]=initArray.arguments[i] } 
- var d=new initArray("ÐÇÆÚÈÕ","ÐÇÆÚÒ»","ÐÇÆÚ¶þ","ÐÇÆÚÈý","ÐÇÆÚËÄ","ÐÇÆÚÎå","ÐÇÆÚÁù"); 
- document.write("", today.getYear(),"Äê",today.getMonth()+1,"ÔÂ",today.getDate(),"ÈÕ&nbsp;",d[today.getDay()+1],""); 
+ var d=new initArray("æ˜ŸæœŸæ—¥","æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­"); 
+ document.write("", today.getYear(),"å¹´",today.getMonth()+1,"æœˆ",today.getDate(),"æ—¥&nbsp;",d[today.getDay()+1],""); 
   
- months = ["Ò»","¶þ","Èý","ËÄ","Îå","Áù","Æß","°Ë","¾Å","Ê®","Ê®Ò»","Ê®¶þ"]; 
+ months = ["ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹","å","åä¸€","åäºŒ"]; 
   
- days = ["³õÒ»","³õ¶þ","³õÈý","³õËÄ","³õÎå","³õÁù","³õÆß","³õ°Ë","³õ¾Å","³õÊ®","Ê®Ò»","Ê®¶þ","Ê®Èý","Ê®ËÄ","Ê®Îå","Ê®Áù","Ê®Æß","Ê®°Ë","Ê®¾Å","¶þÊ®","Ø¥Ò»","Ø¥¶þ","Ø¥Èý","Ø¥ËÄ","Ø¥Îå","Ø¥Áù","Ø¥Æß","Ø¥°Ë","Ø¥¾Å","ÈýÊ®"]; 
- document.write( "&nbsp;Å©Àú"+months[LunarMonth-1]+"ÔÂ" + days[LunarDate-1] + ""); 
+ days = ["åˆä¸€","åˆäºŒ","åˆä¸‰","åˆå››","åˆäº”","åˆå…­","åˆä¸ƒ","åˆå…«","åˆä¹","åˆå","åä¸€","åäºŒ","åä¸‰","åå››","åäº”","åå…­","åä¸ƒ","åå…«","åä¹","äºŒå","å»¿ä¸€","å»¿äºŒ","å»¿ä¸‰","å»¿å››","å»¿äº”","å»¿å…­","å»¿ä¸ƒ","å»¿å…«","å»¿ä¹","ä¸‰å"]; 
+ document.write( "&nbsp;å†œåŽ†"+months[LunarMonth-1]+"æœˆ" + days[LunarDate-1] + ""); 
  return 0;  
 } 
- /* ÊÇ·ñÓÐÈòÄê, 0 Æ½Äê, 1 ÈòÄê */ 
+ /* æ˜¯å¦æœ‰é—°å¹´, 0 å¹³å¹´, 1 é—°å¹´ */ 
 function GetLeap( year ) 
  { 
  if ( year % 400 == 0 ) 
@@ -123,10 +123,10 @@ function GetLeap( year )
  } 
 function tagLunarCal( d, i, w, k, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13) { 
  this.BaseDays = d;  
- this.Intercalation = i; /* 0´ú±í´ËÄê›]ÓÐÈòÔÂ */ 
- this.BaseWeekday = w; /* Ãñ¹ú1ÔÂ1ÈÕÐÇÆÚœp 1 */ 
- this.BaseKanChih = k; /* Ãñ¹ú1ÔÂ1ÈÕ¸ÉÖ§ÐòºÅ¼õ 1 */ 
- this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ]; /* ´ËÞr•ÑÄêÃ¿ÔÂÖ®´óÐ¡, 0==Ð¡ÔÂ(29ÈÕ), 1==´óÔÂ(30ÈÕ) */ 
+ this.Intercalation = i; /* 0ä»£è¡¨æ­¤å¹´æ²’æœ‰é—°æœˆ */ 
+ this.BaseWeekday = w; /* æ°‘å›½1æœˆ1æ—¥æ˜ŸæœŸæ¸› 1 */ 
+ this.BaseKanChih = k; /* æ°‘å›½1æœˆ1æ—¥å¹²æ”¯åºå·å‡ 1 */ 
+ this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ]; /* æ­¤è¾²æ›†å¹´æ¯æœˆä¹‹å¤§å°, 0==å°æœˆ(29æ—¥), 1==å¤§æœˆ(30æ—¥) */ 
 } 
 CalConv(); 
 //--> 
